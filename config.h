@@ -1,12 +1,27 @@
-/* See LICENSE file for copyright and license details. */
+#define S_base03        "#002b36"
+#define S_base02        "#073642"
+#define S_base01        "#586e75"
+#define S_base00        "#657b83"
+#define S_base0         "#839496"
+#define S_base1         "#93a1a1"
+#define S_base2         "#eee8d5"
+#define S_base3         "#fdf6e3"
+#define S_yellow        "#b58900"
+#define S_orange        "#cb4b16"
+#define S_red           "#dc322f"
+#define S_magenta       "#d33682"
+#define S_violet        "#6c71c4"
+#define S_blue          "#268bd2"
+#define S_cyan          "#2aa198"
+#define S_green         "#859900"
 
 /*
  * appearance
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=13:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "Fantasque Sans Mono:pixelsize=15:antialias=true:autohint=true";
+static int borderpx = 10;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -65,7 +80,7 @@ static unsigned int blinktimeout = 800;
 /*
  * thickness of underline and bar cursors
  */
-static unsigned int cursorthickness = 2;
+static unsigned int cursorthickness = 1;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -95,32 +110,31 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* solarized light */
-	"#eee8d5",  /*  0: black    */
-	"#dc322f",  /*  1: red      */
-	"#859900",  /*  2: green    */
-	"#b58900",  /*  3: yellow   */
-	"#268bd2",  /*  4: blue     */
-	"#d33682",  /*  5: magenta  */
-	"#2aa198",  /*  6: cyan     */
-	"#073642",  /*  7: white    */
-	"#fdf6e3",  /*  8: brblack  */
-	"#cb4b16",  /*  9: brred    */
-	"#93a1a1",  /* 10: brgreen  */
-	"#839496",  /* 11: bryellow */
-	"#657b83",  /* 12: brblue   */
-	"#6c71c4",  /* 13: brmagenta*/
-	"#586e75",  /* 14: brcyan   */
-	"#002b36",  /* 15: brwhite  */
+	S_base02,  /*  0: black    */
+	S_red,  /*  1: red      */
+	S_green,  /*  2: green    */
+	S_yellow,  /*  3: yellow   */
+	S_blue,  /*  4: blue     */
+	S_magenta,  /*  5: magenta  */
+	S_cyan,  /*  6: cyan     */
+	S_base2,  /*  7: white    */
+	S_base03,  /*  8: brblack  */
+	S_orange,  /*  9: brred    */
+	S_base01,  /* 10: brgreen  */
+	S_base00,  /* 11: bryellow */
+	S_base0,  /* 12: brblue   */
+	S_violet,  /* 13: brmagenta*/
+	S_base1,  /* 14: brcyan   */
+	S_base3,  /* 15: brwhite  */
+	"#000000", /* 16: BLACK */
 };
-
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 12;
-unsigned int defaultbg = 8;
+unsigned int defaultfg = 16;
+unsigned int defaultbg = 15;
 static unsigned int defaultcs = 14;
 static unsigned int defaultrcs = 15;
 
